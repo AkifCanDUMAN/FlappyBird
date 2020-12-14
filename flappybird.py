@@ -1,4 +1,6 @@
-import turtle , time , random
+import turtle
+import time
+import random
 
 window = turtle.Screen()
 canvas = window.getcanvas()
@@ -31,11 +33,13 @@ write.goto(0, 300)
 
 Gravity = -0.3
 
+
 def bird_up(x, y):
     bird.dy = bird.dy + 8
 
     if bird.dy > 8:
         bird.dy = 8
+
 
 def close():
     global Continue
@@ -93,16 +97,21 @@ while Continue:
             x = pipe[1].xcor()
             x = x + pipe[1].dx
             pipe[1].setx(x)
-            if pipe[0].xcor() < -300:
+        if pipe[0].xcor() < -300:
                 pipe[0].hideturtle()
                 pipe[1].hideturtle()
                 pipes.pop(pipes.index(pipe))
-            if (bird.xcor()+10>pipe[0].xcor()-20) and (bird.xcor()-10<pipe[0].xcor()+20):
-                if (bird.ycor()+10>pipe[0].ycor()-pipe[0].h*10) or (bird.ycor()-10<pipe[1].ycor()+pipe[1].h*10):
-                    point = point -1
-                    write.clear()
-                    write.write('Point: {}'.format(point), align='center', font=('Courier', 24, 'bold'))
 
-        if point < 0:
-            write.clear()
-            write.write('You Lose', align='center', font=('Courier', 24, 'bold'))
+        if (bird . xcor() + 10 > pipe[0] . xcor() - 20) \
+                and (bird . xcor() - 10 < pipe[0] . xcor() + 20):
+            if (bird . ycor() + 10 > pipe[0] . ycor() - pipe[0] . h * 10) \
+                    or \
+                    (bird . ycor() - 10 < pipe[1] . ycor() + pipe[1] . h * 10):
+                    point = point - 1
+                    write.clear()
+                    write.write('Point: {}'.format(point),
+                                align='center', font=('Courier', 24, 'bold'))
+
+    if point < 0:
+        write.clear()
+        write.write('You Lose', align='center', font=('Courier', 24, 'bold'))
