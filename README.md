@@ -17,3 +17,4 @@ You can start playing the game by clicking on "Run" button.
 
 ![flappy bird](https://user-images.githubusercontent.com/73740265/102808111-04fc8b80-43ea-11eb-8939-f1341c3478c4.jpg)
 
+# Made by Kharun Daian and Akif Can Duman
