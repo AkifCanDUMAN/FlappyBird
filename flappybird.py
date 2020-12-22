@@ -115,3 +115,6 @@ while Continue:
     if point < 0:
         write.clear()
         write.write('You Lose', align='center', font=('Courier', 24, 'bold'))
+        
+        
+        
