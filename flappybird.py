@@ -2,7 +2,25 @@ import turtle
 import time
 import random
 
+window = turtle.Screen()
+canvas = window.getcanvas()
+root = canvas.winfo_toplevel()
+window.title('Flappy Bird')
+window.bgcolor('blue')
+window.bgpic('flappybird.gif')
+window.setup(width=500, height=700)
+window.tracer(0)
 
+window.register_shape('bird.gif')
+
+bird = turtle.Turtle()
+bird.speed(0)
+bird.color('yellow')
+bird.shape('bird.gif')
+bird.penup()
+bird.goto(-180, 0)
+bird.dx = 0
+bird.dy = 1
 
 point = 100
 write = turtle.Turtle()
